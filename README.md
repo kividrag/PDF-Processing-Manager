@@ -101,6 +101,10 @@ pyinstaller --onefile --windowed --name "PDFProcessor" main.py
 pdf-processing-manager/
 ├── main.py                   # Main application entry point
 ├── requirements.txt          # Required libraries
+├── core
+|   ├── dialogs.py
+|   ├── process_widget.py
+|   ├── worker.py
 ├── utils/
 │   └── pdf_extract.py        # PDF text extraction utilities
 ├── saves/                    # Persistent data storage (auto-generated)
