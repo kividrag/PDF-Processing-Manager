@@ -173,18 +173,19 @@ class MainWindow(QMainWindow):
         if self.theme == 'dark':
             self.setStyleSheet("""
                 QMainWindow {
-                    background-color: #2C3E50;
+                    background-color: #0a0a0a;
                 }
                 QWidget#centralWidget {
-                    background-color: #2C3E50;
+                    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                                                      stop:0 #0a0a0a, stop:1 #1a1a1a);
                 }
                 QLabel {
-                    color: #ECF0F1;
+                    color: #e0e0e0;
                 }
                 QLineEdit, QTextEdit {
-                    background-color: #34495E;
-                    color: #ECF0F1;
-                    border: 1px solid #5D6D7E;
+                    background-color: #2a2a2a;
+                    color: #e0e0e0;
+                    border: 1px solid #404040;
                     border-radius: 4px;
                     padding: 6px;
                     selection-background-color: #3498DB;
@@ -196,15 +197,15 @@ class MainWindow(QMainWindow):
                     font-family: 'Segoe UI', Arial;
                 }
                 QListWidget {
-                    background-color: #34495E;
-                    color: #ECF0F1;
-                    border: 1px solid #5D6D7E;
+                    background-color: #2a2a2a;
+                    color: #e0e0e0;
+                    border: 1px solid #404040;
                     border-radius: 6px;
                     padding: 5px;
                 }
                 QListWidget::item {
                     padding: 8px;
-                    border-bottom: 1px solid #2C3E50;
+                    border-bottom: 1px solid #333333;
                 }
                 QListWidget::item:selected {
                     background-color: #3498DB;
@@ -212,7 +213,7 @@ class MainWindow(QMainWindow):
                     border-radius: 4px;
                 }
                 QListWidget::item:hover {
-                    background-color: #4A6278;
+                    background-color: #3a3a3a;
                     border-radius: 4px;
                 }
                 QScrollArea {
@@ -220,40 +221,41 @@ class MainWindow(QMainWindow):
                     background-color: transparent;
                 }
                 QScrollBar:vertical {
-                    background-color: #2C3E50;
+                    background-color: #1a1a1a;
                     width: 12px;
                     border-radius: 6px;
                 }
                 QScrollBar::handle:vertical {
-                    background-color: #95A5A6;
+                    background-color: #404040;
                     border-radius: 6px;
                     min-height: 20px;
                 }
                 QScrollBar::handle:vertical:hover {
-                    background-color: #7F8C8D;
+                    background-color: #505050;
                 }
                 QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
                     height: 0px;
                 }
                 QGroupBox#statsGroup {
                     font-weight: bold;
-                    border: 2px solid #7F8C8D;
+                    border: 2px solid #404040;
                     border-radius: 8px;
                     padding-top: 10px;
-                    background-color: #34495E;
-                    color: #ECF0F1;
+                    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                                      stop:0 #2a2a2a, stop:1 #1a1a1a);
+                    color: #e0e0e0;
                 }
                 QGroupBox::title {
                     subcontrol-origin: margin;
                     left: 10px;
                     padding: 0 10px 0 10px;
-                    color: #ECF0F1;
+                    color: #e0e0e0;
                 }
                 QLabel#statsLabel {
                     padding: 10px;
-                    background-color: #2C3E50;
+                    background-color: #151515;
                     border-radius: 6px;
-                    border: 1px solid #5D6D7E;
+                    border: 1px solid #404040;
                     min-width: 150px;
                     text-align: center;
                 }
@@ -317,25 +319,28 @@ class MainWindow(QMainWindow):
                     background-color: #A93226;
                 }
                 QWidget#folderWidget {
-                    background-color: #34495E;
+                    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                                      stop:0 #2a2a2a, stop:1 #1a1a1a);
                     border-radius: 8px;
                 }
                 QWidget#processWidget {
-                    background-color: #34495E;
+                    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                                      stop:0 #2a2a2a, stop:1 #1a1a1a);
                     border-radius: 8px;
                 }
                 QWidget#processContainer {
-                    background-color: #2C3E50;
+                    background-color: #151515;
                 }
                 QLabel#folderHeader, QLabel#currentFolderLabel {
-                    color: #ECF0F1;
+                    color: #e0e0e0;
                     padding: 10px;
-                    background-color: #2C3E50;
+                    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                                      stop:0 #2a2a2a, stop:1 #1a1a1a);
                     border-radius: 6px;
-                    border: 2px solid #5D6D7E;
+                    border: 2px solid #404040;
                 }
                 QSplitter#contentSplitter::handle {
-                    background-color: #5D6D7E;
+                    background-color: #404040;
                     width: 3px;
                 }
                 QSplitter#contentSplitter::handle:hover {
@@ -551,17 +556,17 @@ class MainWindow(QMainWindow):
         if self.theme == 'dark':
             dialog.setStyleSheet("""
                 QDialog#newFolderDialog {
-                    background-color: #2C3E50;
+                    background-color: #0a0a0a;
                 }
                 QLabel {
-                    color: #ECF0F1;
+                    color: #e0e0e0;
                 }
                 QLineEdit#folderNameInput {
                     padding: 10px;
-                    border: 2px solid #5D6D7E;
+                    border: 2px solid #404040;
                     border-radius: 6px;
-                    background-color: #34495E;
-                    color: #ECF0F1;
+                    background-color: #2a2a2a;
+                    color: #e0e0e0;
                     font-size: 12px;
                 }
                 QLineEdit#folderNameInput:focus {
@@ -582,7 +587,7 @@ class MainWindow(QMainWindow):
                     background-color: #219653;
                 }
                 QPushButton#cancelFolderButton {
-                    background-color: #95A5A6;
+                    background-color: #505050;
                     color: white;
                     border: none;
                     padding: 10px 25px;
@@ -590,10 +595,10 @@ class MainWindow(QMainWindow):
                     font-weight: bold;
                 }
                 QPushButton#cancelFolderButton:hover {
-                    background-color: #7F8C8D;
+                    background-color: #606060;
                 }
                 QPushButton#cancelFolderButton:pressed {
-                    background-color: #6C7B7D;
+                    background-color: #707070;
                 }
             """)
         else:
@@ -842,18 +847,18 @@ class MainWindow(QMainWindow):
         if self.theme == 'dark':
             dialog.setStyleSheet("""
                 QDialog#newProcessDialog {
-                    background-color: #2C3E50;
+                    background-color: #0a0a0a;
                 }
                 QLabel {
-                    color: #ECF0F1;
+                    color: #e0e0e0;
                     font-weight: bold;
                 }
                 QLineEdit#processNameInput, QLineEdit#modelInput {
                     padding: 10px;
-                    border: 2px solid #5D6D7E;
+                    border: 2px solid #404040;
                     border-radius: 6px;
-                    background-color: #34495E;
-                    color: #ECF0F1;
+                    background-color: #2a2a2a;
+                    color: #e0e0e0;
                     font-size: 12px;
                 }
                 QLineEdit#processNameInput:focus, QLineEdit#modelInput:focus {
@@ -861,19 +866,19 @@ class MainWindow(QMainWindow):
                 }
                 QLineEdit#pdfFolderInput {
                     padding: 10px;
-                    border: 2px solid #5D6D7E;
+                    border: 2px solid #404040;
                     border-radius: 6px;
-                    background-color: #2C3E50;
+                    background-color: #1a1a1a;
                     font-size: 12px;
-                    color: #BDC3C7;
+                    color: #a0a0a0;
                 }
                 QTextEdit#instructionInput {
                     padding: 10px;
-                    border: 2px solid #5D6D7E;
+                    border: 2px solid #404040;
                     border-radius: 6px;
-                    background-color: #34495E;
+                    background-color: #2a2a2a;
                     font-size: 12px;
-                    color: #ECF0F1;
+                    color: #e0e0e0;
                 }
                 QTextEdit#instructionInput:focus {
                     border: 2px solid #3498DB;
@@ -908,7 +913,7 @@ class MainWindow(QMainWindow):
                     background-color: #219653;
                 }
                 QPushButton#cancelProcessButton {
-                    background-color: #95A5A6;
+                    background-color: #505050;
                     color: white;
                     border: none;
                     padding: 12px 30px;
@@ -917,10 +922,10 @@ class MainWindow(QMainWindow):
                     font-size: 12px;
                 }
                 QPushButton#cancelProcessButton:hover {
-                    background-color: #7F8C8D;
+                    background-color: #606060;
                 }
                 QPushButton#cancelProcessButton:pressed {
-                    background-color: #6C7B7D;
+                    background-color: #707070;
                 }
             """)
         else:
@@ -1228,15 +1233,15 @@ class MainWindow(QMainWindow):
         if self.theme == 'dark':
             dialog.setStyleSheet("""
                 QDialog#logDialog {
-                    background-color: #2C3E50;
+                    background-color: #0a0a0a;
                 }
                 QTextEdit#logDisplay {
-                    background-color: #1C2833;
-                    color: #ECF0F1;
+                    background-color: #1a1a1a;
+                    color: #e0e0e0;
                     font-family: 'Courier New', monospace;
                     font-size: 11px;
                     padding: 10px;
-                    border: 2px solid #34495E;
+                    border: 2px solid #404040;
                     border-radius: 6px;
                 }
                 QPushButton#closeLogButton {
@@ -1430,13 +1435,13 @@ def main():
 
     # Apply default palette
     palette = QPalette()
-    palette.setColor(QPalette.ColorRole.Window, QColor(44, 62, 80))
-    palette.setColor(QPalette.ColorRole.WindowText, QColor(236, 240, 241))
-    palette.setColor(QPalette.ColorRole.Base, QColor(52, 73, 94))
-    palette.setColor(QPalette.ColorRole.AlternateBase, QColor(44, 62, 80))
-    palette.setColor(QPalette.ColorRole.ToolTipBase, QColor(44, 62, 80))
-    palette.setColor(QPalette.ColorRole.ToolTipText, QColor(236, 240, 241))
-    palette.setColor(QPalette.ColorRole.Text, QColor(236, 240, 241))
+    palette.setColor(QPalette.ColorRole.Window, QColor(10, 10, 10))
+    palette.setColor(QPalette.ColorRole.WindowText, QColor(224, 224, 224))
+    palette.setColor(QPalette.ColorRole.Base, QColor(42, 42, 42))
+    palette.setColor(QPalette.ColorRole.AlternateBase, QColor(26, 26, 26))
+    palette.setColor(QPalette.ColorRole.ToolTipBase, QColor(26, 26, 26))
+    palette.setColor(QPalette.ColorRole.ToolTipText, QColor(224, 224, 224))
+    palette.setColor(QPalette.ColorRole.Text, QColor(224, 224, 224))
     palette.setColor(QPalette.ColorRole.Button, QColor(52, 152, 219))
     palette.setColor(QPalette.ColorRole.ButtonText, QColor(255, 255, 255))
     palette.setColor(QPalette.ColorRole.BrightText, QColor(255, 255, 255))
