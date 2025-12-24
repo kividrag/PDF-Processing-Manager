@@ -117,6 +117,7 @@ class ProcessWorker(QThread):
                             {"role": "system", "content": instruction},
                             {"role": "user", "content": content}
                         ],
+                        max_tokens = 36000,
                     )
 
                     # Save result
