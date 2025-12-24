@@ -120,7 +120,7 @@ class ProcessWorker(QThread):
                     )
 
                     # Save result
-                    result_filename = f"{idx + 1:03d}_{Path(pdf_file).stem}.txt"
+                    result_filename = f"{idx + 1:03d}_{Path(pdf_file).stem}.md"
                     result_path = os.path.join(output_folder, result_filename)
 
                     with open(result_path, 'w', encoding='utf-8') as f:
