@@ -117,7 +117,12 @@ class ProcessWorker(QThread):
                             {"role": "system", "content": instruction},
                             {"role": "user", "content": content}
                         ],
-                        max_tokens = 36000,
+                        max_tokens = 72000,
+                        extra_body={
+                            "reasoning" : {
+                                "effort" : "high"
+                            }
+                        },
                     )
 
                     # Save result
