@@ -1,3 +1,4 @@
 PyQt6
 openai
-pdfplumber
+pymupdf4llm
+pymupdf-layout
